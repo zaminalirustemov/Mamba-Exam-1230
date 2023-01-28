@@ -1,0 +1,17 @@
+﻿@model Settings
+
+<div class="card-body">
+    <h4 class="card-title">Settings/Update</h4>
+    <form class="forms-sample" method="post">
+
+        <div class="form-group row">
+            <label asp-for="Value" class="col-sm-3 col-form-label">@Model.Key</label>
+            <div class="col-sm-9">
+                <input asp-for="Value" class="form-control" placeholder="Value">
+                <span asp-validation-for="Value" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2"><i class="mdi mdi-table-edit"></i>Update</button>
+        <a asp-action="index" asp-controller="settings" class="btn btn-dark">Cancel</a>
+    </form>
+</div>
